@@ -6,6 +6,12 @@ This repository stores the guidelines for working with Github at AWK Group. The 
 
 
 
+## Naming Convention
+
+## Best Practices
+
+## Extensions of AWK Github
+
 ## Contact Persons
 
 * Thomas Kathriner (thomas.kathriner@awk.ch)
