@@ -1,12 +1,18 @@
 # AWK Github Guidelines
 This repository stores the guidelines for working with Github at AWK Group. The purpose of this documentation is to provide transparancy and consistency in dealing with coding projects. It provides an introduction to Gitflow, describes the desired naming conventions and lists the responsible contact persons.
 
+The following internal repository already provides a basic introduction and shall be referred to at this point: 
+
+* [Introduction to Git](https://github.com/awkgroupag/Git-Know-How)
+
 
 ## Gitflow Workflow
 
 ![Gitflow](https://i.imgur.com/pcb2IrK.png)
 
-The goal is to encapsulate feature development in order to not disturb the main codebase. Instead of commiting directly to the master branch, developers create a seperate branches for a new features. In this context, Gitflow is a suggested workflow for managing larger projects with scheduled release cycle. Specifically, it assigns specific roles and interaction rules to different types of branches.
+The goal is to encapsulate feature development in order to not disturb the main codebase. Instead of commiting directly to the master branch, developers create a seperate branches for a new features. In this context, Gitflow is a suggested workflow for managing larger projects with scheduled release cycle. Specifically, it assigns specific roles and interaction rules to different types of branches. For more information, refer to the following documentation by Bitbucket: 
+
+* [Introduction to Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 **Develop and Master Branches**
 
@@ -73,7 +79,6 @@ Each repository shall follow a distinct naming convention for clarity and ease o
 * Do not leak secrets (API keys, login informations etc.) into source code.
 
 ## Extensions of AWK Github
-
 
 - [ ] Github Enterprise for continuous integration, testing and delivery?
 
