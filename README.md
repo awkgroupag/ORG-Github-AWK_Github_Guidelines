@@ -62,6 +62,11 @@ git checkout develop git merge hotfix_branch
 
 ## Naming Convention
 
+Each repository shall follow a distinct naming convention for clarity and ease of findability. Thereby, one distinguish between customer and internal projects. Furthermore, the naming shall also include the team (Team abbreviation: DA_AI, AI, DI or ORG) responsible for the maintenance of the repository.
+
+* Customer: *Projectnumber-Customer_Abbreviation-Projectname* (e.g. *114045046-ASTRA-Fahrzeit*)
+* Internal: *Team_Abbreviation-Technology_Platform-Projectname* (e.g. *DA_AI-Jupyter-DataLab_Stack*)
+
 ## Best Practices
 
 ## Extensions of AWK Github
