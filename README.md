@@ -45,10 +45,17 @@ git checkout develop git merge release/0.1.0
 
 **Hotfix Branches**
 
-A hotflix branch is used to quickly patch production releases. In contrast to release branches, hotflix branches are based on master. 
+A hotflix branch is used to quickly patch production releases. In contrast to release branches, hotflix branches are based on master. Dedicated lines for bug fixes are ideal for avoiding interruption with the rest of the development within a team.   
 
 ```console
 git checkout master git checkout -b hotfix_branch
+```
+
+As soon as the fix is complete, it should merged into both master (tagged with a version number) and develop (or the current release branch).
+
+```console
+git checkout master git merge hotfix_branch 
+git checkout develop git merge hotfix_branch
 ```
 
 ## Naming Convention
