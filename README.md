@@ -32,7 +32,7 @@ git checkout develop git merge feature_branch
 
 **Release Branches**
 
-Once develop has acquired enough features for a release, a release branch is forked off of develop. 
+Once develop has acquired enough features for a release, a release branch (cyan) is forked off of develop. 
 
 ```console
 git checkout develop git checkout -b release/0.1.0
@@ -47,7 +47,7 @@ git checkout develop git merge release/0.1.0
 
 **Hotfix Branches**
 
-A hotflix branch is used to quickly patch production releases. In contrast to release branches, hotflix branches are based on master. Dedicated lines for bug fixes are ideal for avoiding interruption with the rest of the development within a team.   
+A hotflix branch (orange) is used to quickly patch production releases. In contrast to release branches, hotflix branches are based on master. Dedicated lines for bug fixes are ideal for avoiding interruption with the rest of the development within a team.   
 
 ```console
 git checkout master git checkout -b hotfix_branch
