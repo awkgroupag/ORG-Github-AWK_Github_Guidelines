@@ -69,7 +69,13 @@ Each repository shall follow a distinct naming convention for clarity and ease o
 
 ## Best Practices
 
+* Use Gitflow (or feature branch workflow) if team size is large.
+* Do not leak secrets (API keys, login informations etc.) into source code.
+
 ## Extensions of AWK Github
+
+
+- [] Github Enterprise for continuous integration, testing and delivery?
 
 ## Contact Persons
 
