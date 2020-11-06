@@ -75,7 +75,7 @@ Each repository shall follow a distinct naming convention for clarity and ease o
 ## Extensions of AWK Github
 
 
-- [] Github Enterprise for continuous integration, testing and delivery?
+- [ ] Github Enterprise for continuous integration, testing and delivery?
 
 ## Contact Persons
 
