@@ -1,88 +1,45 @@
 # AWK Github Guidelines
-This repository stores the guidelines for working with Github at AWK Group. The purpose of this documentation is to provide transparancy and consistency in dealing with coding projects. It provides an introduction to Gitflow, describes the desired naming conventions and lists the responsible contact persons.
-
-The following internal repository already provides a basic introduction and shall be referred to at this point: 
-
-* [Introduction to Git](https://github.com/awkgroupag/Git-Know-How)
+This repository stores the guidelines for working with Github at AWK Group. The purpose of this documentation is to provide transparancy and consistency in dealing with coding projects. It describes the desired naming conventions, provides an introduction to basic Git commands, Git Feature Branch Workflow and lists the responsible contact persons.
 
 
-## Gitflow Workflow
+### Basic Git Commands
 
-![Gitflow](https://i.imgur.com/pcb2IrK.png)
+Basic git commands and tools can be found in the source folders `git` and `tools` respectively.
 
-The goal is to encapsulate feature development in order to not disturb the main codebase. Instead of commiting directly to the master branch, developers create a seperate branches for a new features. In this context, Gitflow is a suggested workflow for managing larger projects with scheduled release cycle. Specifically, it assigns specific roles and interaction rules to different types of branches. For more information, refer to the following documentation by Bitbucket: 
 
-* [Introduction to Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+### Naming Conventions
 
-**Develop and Master Branches**
+Each repository shall follow a distinct naming convention for clarity and ease of findability. Thereby, one distinguishes between customer and internal projects. Furthermore, the naming shall also include the team (Team abbreviation: `DA_AI`, `AI`, `DI` or `ORG`) responsible for the maintenance of the repository.
 
-There are two branches to record the history of the project. The master branch (light blue) stores the official release history (tagged with a version number), while the develop branch (purple) is used for integration of new features. At the beginning of a project, a parallel develop branch can be created locally and pushed to the server by the following bash command.
+* Customer: `Projectnumber-Customer_Abbreviation-Projectname` (e.g. *114045046-ASTRA-Fahrzeit*)
+* Internal: `Team_Abbreviation-Technology_Platform-Projectname` (e.g. *DA_AI-Jupyter-DataLab_Stack*)
 
-```console
-git branch develop git push -u origin develop
-```
 
-**Feature Branches**
+### Best Practices
 
-New features should reside in their own branches (green), which can be pushed to the central repository for backup and collaboration. Here, they should use develop as their parent branch. 
+* Adhere to the Git branching standards (cf. below).
+* Do not leak secrets (API keys, login information, etc.) into source code.
 
-```console
-git checkout develop git checkout -b feature_branch
-```
 
-After a feature is completed, the corresponding feature branch gets merged back into develop.
+### Git Feature Branch Workflow
 
-```console
-git checkout develop git merge feature_branch
-```
+The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the master branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the master branch will never contain broken code, which is a huge advantage for continuous integration environments. 
 
-**Release Branches**
+![Git Feature Branch Workflow](https://wac-cdn.atlassian.com/dam/jcr:09308632-38a3-4637-bba2-af2110629d56/07.svg?cdnVersion=1320)
 
-Once develop has acquired enough features for a release, a release branch (cyan) is forked off of develop. 
+For more information, refer to the following documentation by Bitbucket: 
 
-```console
-git checkout develop git checkout -b release/0.1.0
-```
+* [Introduction to Git Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
 
-In the release branch, no new features can be added. Only bug fixes, documentation generation and other release-oriented tasks should go into this branch. Once this process is completed, the release branch gets merged into master (tagged with a version number) as well as back into develop.
+Single collaborator projects (that do not go into production) and documentation repos (like this one) do not need to follow strict branching standards.
 
-```console
-git checkout master git merge release/0.1.0
-git checkout develop git merge release/0.1.0
-```
 
-**Hotfix Branches**
+### Planned Extensions of AWK Github
 
-A hotflix branch (orange) is used to quickly patch production releases. In contrast to release branches, hotflix branches are based on master. Dedicated lines for bug fixes are ideal for avoiding interruption with the rest of the development within a team.   
+- [ ] Github Enterprise for SSO, continuous integration, testing and delivery?
 
-```console
-git checkout master git checkout -b hotfix_branch
-```
 
-As soon as the fix is complete, it should merged into both master (tagged with a version number) and develop (or the current release branch).
+### Contact Persons
 
-```console
-git checkout master git merge hotfix_branch 
-git checkout develop git merge hotfix_branch
-```
-
-## Naming Convention
-
-Each repository shall follow a distinct naming convention for clarity and ease of findability. Thereby, one distinguish between customer and internal projects. Furthermore, the naming shall also include the team (Team abbreviation: DA_AI, AI, DI or ORG) responsible for the maintenance of the repository.
-
-* Customer: *Projectnumber-Customer_Abbreviation-Projectname* (e.g. *114045046-ASTRA-Fahrzeit*)
-* Internal: *Team_Abbreviation-Technology_Platform-Projectname* (e.g. *DA_AI-Jupyter-DataLab_Stack*)
-
-## Best Practices
-
-* Use Gitflow (or feature branch workflow) if team size is large.
-* Do not leak secrets (API keys, login informations etc.) into source code.
-
-## Extensions of AWK Github
-
-- [ ] Github Enterprise for continuous integration, testing and delivery?
-
-## Contact Persons
-
-* Thomas Kathriner (thomas.kathriner@awk.ch)
-* Jesko Mueller (jesko.mueller@awk.ch)
+* Thomas Kathriner (thomas.kathriner@awk.ch) - CoP Data Analytics & Artificial Intelligence
+* Jesko Mueller (jesko.mueller@awk.ch) - CoP Digital Infrastructures
