@@ -4,7 +4,7 @@ This repository stores the guidelines for working with Github at AWK Group. The 
 
 ## Gitflow Workflow
 
-![Gitflow](https://imgur.com/a/fzxQ06q)
+![Gitflow](https://i.imgur.com/2NVKjwU.png)
 
 The goal is to encapsulate feature development in order to not disturb the main codebase. Instead of commiting to the master branch, developers create a seperate branches for a new features. In this context, Gitflow is a suggested workflow for managing larger projects with scheduled release cycle. Specifically, it assigns specific roles and interaction rules to different types of branches.
 
