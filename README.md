@@ -30,6 +30,26 @@ git checkout develop git merge feature_branch
 
 **Release Branches**
 
+Once develop has acquired enough features for a release, a release branch is forked off of develop. 
+
+```console
+git checkout develop git checkout -b release/0.1.0
+```
+
+In the release branch, no new features can be added. Only bug fixes, documentation generation and other release-oriented tasks should go into this branch. Once this process is completed, the release branch gets merged into master (tagged with a version number) as well as back into develop.
+
+```console
+git checkout master git merge release/0.1.0
+git checkout develop git merge release/0.1.0
+```
+
+**Hotfix Branches**
+
+A hotflix branch is used to quickly patch production releases. In contrast to release branches, hotflix branches are based on master. 
+
+```console
+git checkout master git checkout -b hotfix_branch
+```
 
 ## Naming Convention
 
