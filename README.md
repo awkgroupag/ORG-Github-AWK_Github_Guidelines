@@ -4,7 +4,7 @@ This repository stores the guidelines for working with Github at AWK Group. The 
 
 ### Basic Git Commands
 
-Basic git commands and tools can be found in the source folders `git` and `tools` respectively.
+Check e.g. the [Atlassian git cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet). Basic git commands and tools can be found in the source folders `git` and `tools` respectively.
 
 
 ### Naming Conventions
@@ -17,8 +17,10 @@ Each repository shall follow a distinct naming convention for clarity and ease o
 
 ### Best Practices
 
-* Adhere to the Git branching standards (cf. below).
 * Do not leak secrets (API keys, login information, etc.) into source code.
+* Keep source code and data separate. Don't check data into GitHub.
+* Set a new GitHub repository to private so your source code is not accessible for the entire world.
+* Adhere to the Git branching standards (cf. below).
 
 
 ### Git Feature Branch Workflow
